@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/plane"
+        android:icon="@drawable/plane"
+        app:showAsAction="always"
+        android:title="airplane"
+        ></item>
+
+    <item
+        android:id="@+id/dark"
+        android:icon="@drawable/dark"
+        app:showAsAction="always"
+        android:title="dark mode"
+        ></item>
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/search"
+        app:showAsAction="always"
+        android:title="search"
+        ></item>
+
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/plane"
+        app:showAsAction="never"
+        android:title="settings"
+        ></item>
+
+</menu>

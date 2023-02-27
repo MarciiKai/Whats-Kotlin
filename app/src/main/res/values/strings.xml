@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WhatsApp Clone</string>
+    <string name="tab_text_1"></string>
+    <string name="tab_text_2">CHATS</string>
+    <string name="tab_text_3">GROUPS</string>
+    <string name="tab_text_4">STATUS</string>
+    <string name="tab_text_5">CALLS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
