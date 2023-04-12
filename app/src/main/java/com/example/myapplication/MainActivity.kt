@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true)
+//        setHasOptionsMenu()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -31,6 +31,10 @@ class MainActivity : AppCompatActivity() {
         tabs.setupWithViewPager(viewPager)
         val fab: FloatingActionButton = binding.fab
 
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        toolbar.inflateMenu(R.menu.menu);
+
         tabs.getTabAt(0)?.setIcon(R.drawable.baseline_photo_cam)
 
         fab.setOnClickListener { view ->
@@ -39,20 +43,21 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun setHasOptionsMenu(b: Boolean) {
-        fun onCreateOptionsMenu(menu: Menu): Boolean {
-            menuInflater.inflate(R.menu.menu,menu)
-            return true
-        }
-        fun onOptionsItemSelected(item: MenuItem1): Boolean {
-            when(item.itemId){
-                R.id.plane->
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+        override fun onOptionsItemSelected(item: MenuItem1): Boolean {
+            when (item.itemId) {
+                R.id.plane ->
                     Toast.makeText(applicationContext, "airplane mode ", Toast.LENGTH_LONG).show()
-                R.id.dark->
+                R.id.dark ->
                     Toast.makeText(applicationContext, "Enter dark mode", Toast.LENGTH_LONG).show()
-                R.id.search->
+                R.id.search ->
                     Toast.makeText(applicationContext, "Please search", Toast.LENGTH_LONG).show()
-                R.id.settings->
+                R.id.settings ->
                     Toast.makeText(applicationContext, "Please set me", Toast.LENGTH_LONG).show()
 
             }
@@ -65,5 +70,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-}
+
+
+
 
